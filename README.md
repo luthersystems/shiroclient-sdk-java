@@ -6,7 +6,7 @@ mock mode.
 
 Argument configuration is identical to the shiroclient Go implementation.
 
-# Example Usage
+## Example Usage
 
 Please see the JUnit test which runs against a localhost shiroclient gateway
 running on port 8082:
