@@ -45,10 +45,11 @@ class ShiroClientTest {
         var endpoint ="http://127.0.0.1:8082";
         var res = new ShiroClient(
                 ShiroClient.WithEndpoint(endpoint),
-                ShiroClient.WithParams(new HashMap<String, Object>()),
-                ShiroClient.WithTransientDataMap(new HashMap<>()),
                 ShiroClient.WithCreator("martin")
-        ).call("healthcheck");
+        ).call("healthcheck",
+                ShiroClient.WithParams(new HashMap<String, Object>()),
+                ShiroClient.WithTransientDataMap(new HashMap<>())
+        );
         System.out.println(new String(res.resultJson()));
         var result = res.unmarshal(HealthCheckResponse.class);
         assertEquals(1, result.reports.length);
