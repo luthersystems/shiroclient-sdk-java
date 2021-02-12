@@ -176,7 +176,7 @@ public class ShiroClient {
         }
     }
 
-    static boolean isTimeoutError(Exception e) {
+    public static boolean isTimeoutError(Exception e) {
         if (!(e instanceof SmartContractError)) {
             return false;
         }
