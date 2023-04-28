@@ -1,8 +1,0 @@
-version: 2
-jobs:
-  build:
-    docker:
-      - image: cimg/openjdk:11.0 # TODO: use luther baseimage
-    steps:
-      - checkout
-      - run: mvn package -Dmaven.test.skip=true
