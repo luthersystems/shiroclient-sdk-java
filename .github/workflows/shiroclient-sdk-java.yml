@@ -1,4 +1,4 @@
-name: luthersystems/shiroclient-sdk-java/luthersystems/shiroclient-sdk-java
+name: CI Tests
 on:
   pull_request:
     branches:
@@ -10,4 +10,5 @@ jobs:
       image: openjdk:11.0
     steps:
     - uses: actions/checkout@v3.5.0
-    - run: mvn package -Dmaven.test.skip=true
+    - name: Run CI tests
+      run: mvn package -Dmaven.test.skip=true
