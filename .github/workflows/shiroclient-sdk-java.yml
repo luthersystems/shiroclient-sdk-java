@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: openjdk:11.0
+      image: maven:3.9.1-eclipse-temurin-11
     steps:
     - uses: actions/checkout@v3.5.0
     - name: Run CI tests
